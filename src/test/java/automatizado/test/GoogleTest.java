@@ -4,7 +4,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.Keys;
 
 import automatizado.page.GooglePO;
 
@@ -15,6 +14,7 @@ public class GoogleTest extends BaseTest{
 
     @BeforeClass
     public static void prepararTest(){
+        driver.get("https://www.google.com/");
         googlePage = new GooglePO(driver);
     }
     
