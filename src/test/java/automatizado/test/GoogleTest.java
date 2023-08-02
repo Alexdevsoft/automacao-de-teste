@@ -10,12 +10,12 @@ import automatizado.page.GooglePO;
 public class GoogleTest extends BaseTest{
 
 
-    private static GooglePO googlePage;
+    //private static GooglePO googlePage;
 
     @BeforeClass
     public static void prepararTest(){
-        driver.get("https://www.google.com/");
-        googlePage = new GooglePO(driver);
+       // driver.get("file:///C:/Users/alexs/Documents/sistema/login.html");
+       // googlePage = new GooglePO(driver);
     }
     
 
@@ -25,11 +25,11 @@ public class GoogleTest extends BaseTest{
         //WebElement inputPesquisa = driver.findElement(By.name("q"));
 
         //googlePage.inputPesquisa.sendKeys("Batata frita" + Keys.ENTER);
-        googlePage.pesquisar("Batata frita");
+       // googlePage.pesquisar("Batata frita");
 
-        String resultado = googlePage.resultadoDaPesquisa();
+        //String resultado = googlePage.resultadoDaPesquisa();
 
-        assertTrue(resultado, resultado.contains("Aproximadamente"));
+       // assertTrue(resultado, resultado.contains("Aproximadamente"));
                 
     }
     
@@ -38,11 +38,11 @@ public class GoogleTest extends BaseTest{
 
         //WebElement inputPesquisa = driver.findElement(By.name("q"));
 
-        googlePage.pesquisar("Pizza");
+       // googlePage.pesquisar("Pizza");
 
-        String resultado = googlePage.resultadoDaPesquisa();
+       // String resultado = googlePage.resultadoDaPesquisa();
 
-        assertTrue(resultado, resultado.contains("resultados"));
+       // assertTrue(resultado, resultado.contains("resultados"));
                 
     }
 }

@@ -12,7 +12,7 @@ public class LoginPO extends BasePO{
     @FindBy(id = "senha")
     public WebElement inputSenha;
 
-    @FindBy(id = "btn-entrar")
+    @FindBy(id = "senha")
     public WebElement buttonEntar;
 
     @FindBy(css = "form.form-login>div.alert>span")
