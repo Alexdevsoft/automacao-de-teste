@@ -21,7 +21,7 @@ public abstract class BaseTest {
 
     @AfterClass
     public static void finalizar(){
-        driver.quit();
+        //driver.quit();
     }
     
 }
