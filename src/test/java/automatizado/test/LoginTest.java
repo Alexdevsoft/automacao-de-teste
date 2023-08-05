@@ -3,10 +3,13 @@ package automatizado.test;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import automatizado.page.LoginPO;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class LoginTest extends BaseTest{
 
       private static LoginPO loginPage;
@@ -47,7 +50,14 @@ public class LoginTest extends BaseTest{
         assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
         
     }
-    
-    
-    
+
+     @Test
+    public void TC007_deveLogarNoSistemaComEmailESenhaCorretos(){
+
+        loginPage.executarAcaoDeLogoar("admin@admin.com", "admin@123");
+
+        assertEquals( loginPage.tituloDaPagina(), "Controle de Produtoss");
+        
+    }
+       
 }
